@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="OutOfPocket" transaction-type="RESOURCE_LOCAL">
+		<provider>
+            org.eclipse.persistence.jpa.PersistenceProvider
+        </provider>
+        
+		<class>com.surya.oop.po.ExpensePO</class>
+		<class>com.surya.oop.po.ExpenseGroupPO</class>
+		<class>com.surya.oop.po.ExpenseTypePO</class>
+		<class>com.surya.oop.po.GroupMemberPO</class>
+		<class>com.surya.oop.po.GroupPO</class>
+		<class>com.surya.oop.po.UserPO</class>
+		<class>com.surya.oop.po.BasePO</class>
+
+		<properties>
+			
+			<property name="eclipselink.logging.logger" value="JavaLogger"/>
+            <property name="eclipselink.logging.level" value="CONFIG"/>
+            <property name="eclipselink.logging.level.sql" value="CONFIG"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/outofpocket"/>
+            <property name="javax.persistence.jdbc.user" value="appuser"/>
+            <property name="javax.persistence.jdbc.password" value="appuser"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+		</properties>
+	</persistence-unit>
+
+
+</persistence>

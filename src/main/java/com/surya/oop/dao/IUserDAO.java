@@ -2,10 +2,7 @@ package com.surya.oop.dao;
 
 import com.surya.oop.po.UserPO;
 
-public interface IUserDAO {
-	UserPO findUser(long id);
+public interface IUserDAO extends IBaseDAO<UserPO> {
 	UserPO findUser(String emailId);
-	UserPO loadAll();
 	UserPO save(UserPO user);
-	UserPO delete(UserPO user);
 }
