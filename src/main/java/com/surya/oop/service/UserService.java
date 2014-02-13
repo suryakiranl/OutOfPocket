@@ -46,7 +46,7 @@ public class UserService {
 	@GET
 	@Produces( {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON} )
 	@Path("/{id}")
-	public User findUser(@PathParam("id") Integer id) {
+	public User findUser(@PathParam("id") Long id) {
 		User u = new User();
 		u.setId(id);
 		u.setFirstName("Surya");
@@ -77,7 +77,7 @@ public class UserService {
 	
 	@DELETE
 	@Path("/delete/{id}")
-	public void deleteUser(@PathParam("id") Integer id) {
+	public void deleteUser(@PathParam("id") Long id) {
 		System.out.println("User requested for deletion: " + id);
 	}
 	
