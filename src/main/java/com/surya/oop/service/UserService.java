@@ -76,8 +76,9 @@ public class UserService {
 	}
 	
 	@DELETE
-	public void deleteUser(User user) {
-		
+	@Path("/delete/{id}")
+	public void deleteUser(@PathParam("id") Integer id) {
+		System.out.println("User requested for deletion: " + id);
 	}
 	
 }
